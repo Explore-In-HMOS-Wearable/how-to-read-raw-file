@@ -1,0 +1,32 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "label"
+    },
+    {
+      "name": "button1",
+      "value": "Read JSON"
+    },
+    {
+      "name": "button2",
+      "value": "Read JSON Alt."
+    },
+    {
+      "name": "button3",
+      "value": "Read JSON Alt. 2"
+    },
+    {
+      "name": "button4",
+      "value": "Read video file"
+    }
+  ]
+}

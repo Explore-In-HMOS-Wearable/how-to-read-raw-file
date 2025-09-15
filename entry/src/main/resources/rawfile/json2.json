@@ -1,0 +1,124 @@
+{
+  "products": [
+    {
+      "id": 101,
+      "name": "Wireless Mouse",
+      "category": "Electronics",
+      "price": 29.99,
+      "stock": 150,
+      "rating": 4.3,
+      "tags": [
+        "computer",
+        "accessory"
+      ]
+    },
+    {
+      "id": 102,
+      "name": "Standing Desk",
+      "category": "Furniture",
+      "price": 199.99,
+      "stock": 45,
+      "rating": 4.7,
+      "tags": [
+        "office",
+        "ergonomic"
+      ]
+    },
+    {
+      "id": 103,
+      "name": "Bluetooth Headphones",
+      "category": "Electronics",
+      "price": 89.99,
+      "stock": 80,
+      "rating": 4.2,
+      "tags": [
+        "audio",
+        "wireless"
+      ]
+    },
+    {
+      "id": 104,
+      "name": "Yoga Mat",
+      "category": "Fitness",
+      "price": 24.95,
+      "stock": 200,
+      "rating": 4.5,
+      "tags": [
+        "exercise",
+        "wellness"
+      ]
+    },
+    {
+      "id": 105,
+      "name": "Smart LED Bulb",
+      "category": "Home",
+      "price": 14.99,
+      "stock": 320,
+      "rating": 4.1,
+      "tags": [
+        "lighting",
+        "smart"
+      ]
+    },
+    {
+      "id": 106,
+      "name": "Coffee Grinder",
+      "category": "Kitchen",
+      "price": 49.99,
+      "stock": 65,
+      "rating": 4.4,
+      "tags": [
+        "appliance",
+        "coffee"
+      ]
+    },
+    {
+      "id": 107,
+      "name": "Noise Cancelling Earbuds",
+      "category": "Electronics",
+      "price": 59.95,
+      "stock": 120,
+      "rating": 4.0,
+      "tags": [
+        "audio",
+        "portable"
+      ]
+    },
+    {
+      "id": 108,
+      "name": "Gaming Keyboard",
+      "category": "Electronics",
+      "price": 74.50,
+      "stock": 75,
+      "rating": 4.6,
+      "tags": [
+        "computer",
+        "gaming"
+      ]
+    },
+    {
+      "id": 109,
+      "name": "Electric Kettle",
+      "category": "Kitchen",
+      "price": 39.95,
+      "stock": 90,
+      "rating": 4.2,
+      "tags": [
+        "appliance",
+        "boil"
+      ]
+    },
+    {
+      "id": 110,
+      "name": "Adjustable Dumbbells",
+      "category": "Fitness",
+      "price": 129.00,
+      "stock": 25,
+      "rating": 4.8,
+      "tags": [
+        "gym",
+        "workout"
+      ]
+    }
+  ]
+}

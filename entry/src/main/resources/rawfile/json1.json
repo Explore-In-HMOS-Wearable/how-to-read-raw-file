@@ -1,0 +1,144 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Emma Peterson",
+      "email": "emma.peterson@example.com",
+      "active": true,
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "name": "Liam Rhodes",
+      "email": "liam.rhodes@example.com",
+      "active": false,
+      "role": "viewer"
+    },
+    {
+      "id": 3,
+      "name": "Ava Mitchell",
+      "email": "ava.mitchell@example.com",
+      "active": true,
+      "role": "editor"
+    },
+    {
+      "id": 4,
+      "name": "Noah Bennett",
+      "email": "noah.bennett@example.com",
+      "active": true,
+      "role": "admin"
+    },
+    {
+      "id": 5,
+      "name": "Olivia Simmons",
+      "email": "olivia.simmons@example.com",
+      "active": false,
+      "role": "editor"
+    },
+    {
+      "id": 6,
+      "name": "William Foster",
+      "email": "william.foster@example.com",
+      "active": true,
+      "role": "viewer"
+    },
+    {
+      "id": 7,
+      "name": "Sophia Hayes",
+      "email": "sophia.hayes@example.com",
+      "active": true,
+      "role": "editor"
+    },
+    {
+      "id": 8,
+      "name": "James Cox",
+      "email": "james.cox@example.com",
+      "active": false,
+      "role": "admin"
+    },
+    {
+      "id": 9,
+      "name": "Isabella Ward",
+      "email": "isabella.ward@example.com",
+      "active": true,
+      "role": "viewer"
+    },
+    {
+      "id": 10,
+      "name": "Benjamin Brooks",
+      "email": "benjamin.brooks@example.com",
+      "active": false,
+      "role": "editor"
+    },
+    {
+      "id": 11,
+      "name": "Mia Perry",
+      "email": "mia.perry@example.com",
+      "active": true,
+      "role": "viewer"
+    },
+    {
+      "id": 12,
+      "name": "Lucas Henderson",
+      "email": "lucas.henderson@example.com",
+      "active": true,
+      "role": "editor"
+    },
+    {
+      "id": 13,
+      "name": "Charlotte Coleman",
+      "email": "charlotte.coleman@example.com",
+      "active": false,
+      "role": "admin"
+    },
+    {
+      "id": 14,
+      "name": "Henry Sanders",
+      "email": "henry.sanders@example.com",
+      "active": true,
+      "role": "viewer"
+    },
+    {
+      "id": 15,
+      "name": "Amelia Price",
+      "email": "amelia.price@example.com",
+      "active": true,
+      "role": "editor"
+    },
+    {
+      "id": 16,
+      "name": "Logan Rogers",
+      "email": "logan.rogers@example.com",
+      "active": false,
+      "role": "admin"
+    },
+    {
+      "id": 17,
+      "name": "Evelyn Myers",
+      "email": "evelyn.myers@example.com",
+      "active": true,
+      "role": "viewer"
+    },
+    {
+      "id": 18,
+      "name": "Alexander Jenkins",
+      "email": "alexander.jenkins@example.com",
+      "active": true,
+      "role": "editor"
+    },
+    {
+      "id": 19,
+      "name": "Harper Reed",
+      "email": "harper.reed@example.com",
+      "active": false,
+      "role": "viewer"
+    },
+    {
+      "id": 20,
+      "name": "Daniel Powell",
+      "email": "daniel.powell@example.com",
+      "active": true,
+      "role": "admin"
+    }
+  ]
+}

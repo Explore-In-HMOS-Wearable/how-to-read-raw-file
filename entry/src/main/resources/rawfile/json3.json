@@ -1,0 +1,199 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Getting Started with HarmonyOS",
+      "author": "Jane Doe",
+      "published": true,
+      "publishedAt": "2025-06-10T14:30:00Z",
+      "tags": [
+        "HarmonyOS",
+        "mobile",
+        "tutorial"
+      ],
+      "views": 1024
+    },
+    {
+      "id": 2,
+      "title": "Understanding State Management in React",
+      "author": "John Smith",
+      "published": true,
+      "publishedAt": "2025-06-18T09:00:00Z",
+      "tags": [
+        "React",
+        "JavaScript",
+        "frontend"
+      ],
+      "views": 2500
+    },
+    {
+      "id": 3,
+      "title": "Dark Mode Design Tips",
+      "author": "Emily Chan",
+      "published": false,
+      "publishedAt": null,
+      "tags": [
+        "UI",
+        "design",
+        "accessibility"
+      ],
+      "views": 0
+    },
+    {
+      "id": 4,
+      "title": "Top 10 VS Code Extensions in 2025",
+      "author": "Mike Thompson",
+      "published": true,
+      "publishedAt": "2025-06-20T11:15:00Z",
+      "tags": [
+        "VSCode",
+        "tools",
+        "productivity"
+      ],
+      "views": 3100
+    },
+    {
+      "id": 5,
+      "title": "Building a Smartwatch App: Step-by-Step Guide",
+      "author": "Sarah Nguyen",
+      "published": true,
+      "publishedAt": "2025-06-05T08:00:00Z",
+      "tags": [
+        "wearables",
+        "app dev",
+        "smartwatch"
+      ],
+      "views": 1840
+    },
+    {
+      "id": 6,
+      "title": "Using Git Effectively",
+      "author": "Alex Green",
+      "published": true,
+      "publishedAt": "2025-06-12T13:00:00Z",
+      "tags": [
+        "git",
+        "version control",
+        "dev tools"
+      ],
+      "views": 890
+    },
+    {
+      "id": 7,
+      "title": "Deploying Your App with Docker",
+      "author": "Laura White",
+      "published": true,
+      "publishedAt": "2025-06-11T10:30:00Z",
+      "tags": [
+        "docker",
+        "devops",
+        "deployment"
+      ],
+      "views": 1475
+    },
+    {
+      "id": 8,
+      "title": "Microinteractions in UI Design",
+      "author": "Dan Kim",
+      "published": false,
+      "publishedAt": null,
+      "tags": [
+        "UX",
+        "design",
+        "animation"
+      ],
+      "views": 0
+    },
+    {
+      "id": 9,
+      "title": "Introduction to WebAssembly",
+      "author": "Olga Petrova",
+      "published": true,
+      "publishedAt": "2025-06-03T15:45:00Z",
+      "tags": [
+        "wasm",
+        "performance",
+        "web"
+      ],
+      "views": 980
+    },
+    {
+      "id": 10,
+      "title": "Testing Strategies for Scalable Frontends",
+      "author": "Mohammed Ali",
+      "published": true,
+      "publishedAt": "2025-06-22T12:10:00Z",
+      "tags": [
+        "testing",
+        "frontend",
+        "scalability"
+      ],
+      "views": 1340
+    },
+    {
+      "id": 11,
+      "title": "CSS Grid vs Flexbox",
+      "author": "Tina Lopez",
+      "published": true,
+      "publishedAt": "2025-06-17T14:45:00Z",
+      "tags": [
+        "CSS",
+        "layout",
+        "frontend"
+      ],
+      "views": 2200
+    },
+    {
+      "id": 12,
+      "title": "Building Offline-First PWAs",
+      "author": "Nathan Lee",
+      "published": true,
+      "publishedAt": "2025-06-14T09:20:00Z",
+      "tags": [
+        "PWA",
+        "offline",
+        "web app"
+      ],
+      "views": 1670
+    },
+    {
+      "id": 13,
+      "title": "Creating Accessible Forms",
+      "author": "Priya Desai",
+      "published": true,
+      "publishedAt": "2025-06-16T11:50:00Z",
+      "tags": [
+        "forms",
+        "accessibility",
+        "a11y"
+      ],
+      "views": 720
+    },
+    {
+      "id": 14,
+      "title": "Using SVGs in Modern Web Design",
+      "author": "Carlos Diaz",
+      "published": true,
+      "publishedAt": "2025-06-13T16:00:00Z",
+      "tags": [
+        "SVG",
+        "web design",
+        "graphics"
+      ],
+      "views": 1385
+    },
+    {
+      "id": 15,
+      "title": "Mastering Asynchronous JavaScript",
+      "author": "Helena Ford",
+      "published": true,
+      "publishedAt": "2025-06-24T08:40:00Z",
+      "tags": [
+        "JavaScript",
+        "async",
+        "promises"
+      ],
+      "views": 2045
+    }
+  ]
+}
