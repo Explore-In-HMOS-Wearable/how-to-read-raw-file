@@ -1,6 +1,6 @@
 {
   "app": {
-    "bundleName": "com.hmosdemos.rawfiles",
+    "bundleName": "com.hmosdemos.wearable.how_to_read_raw_file",
     "vendor": "hmosdemos",
     "versionCode": 1000000,
     "versionName": "1.0.0",

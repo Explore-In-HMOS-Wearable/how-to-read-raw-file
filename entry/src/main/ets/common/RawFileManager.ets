@@ -1,36 +1,39 @@
-import { Users } from "../models/User";
-import { util } from "@kit.ArkTS";
-import { Product, ProductsData } from "../models/Product";
-import { BusinessError } from "@kit.BasicServicesKit";
-import { Post, PostsData } from "../models/Post";
+import { Users } from '../models/User';
+import { util } from '@kit.ArkTS';
+import { Product, ProductsData } from '../models/Product';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Post, PostsData } from '../models/Post';
 
 export class RawFileManager {
   private static instance: RawFileManager;
-  private static TAG: string = "RawfileManager"
+  private static TAG: string = 'RawfileManager'
+  private context?: Context;
 
-  private constructor() {
+  private constructor(context?: Context) {
+    this.context = context;
   }
 
-  public static getInstance(): RawFileManager {
+  public static getInstance(context?: Context): RawFileManager {
     if (!RawFileManager.instance) {
-      RawFileManager.instance = new RawFileManager();
+      RawFileManager.instance = new RawFileManager(context);
     }
     return RawFileManager.instance;
   }
 
-  async readRawFileDeprecated(fileName: string) {
+  async readRawFileDeprecated(fileName: string): Promise<Users | undefined> {
     console.info(`${RawFileManager.TAG} readRawFfileDepracted called`)
-    const rawFileContent = await RawFileManager.getRawfileContent(fileName)
-    const rawfileString = RawFileManager.uint8ArrayToString(rawFileContent)
-    const json = RawFileManager.parseJson1(rawfileString)
-    return json
+    const rawFileContent = await this.getRawfileContent(fileName)
+    if (rawFileContent) {
+      const rawfileString = RawFileManager.uint8ArrayToString(rawFileContent)
+      const json = RawFileManager.parseJson1(rawfileString)
+      return json;
+    }
+    return undefined;
   }
 
-  private static async getRawfileContent(fileName: string) {
+  private async getRawfileContent(fileName: string): Promise<Uint8Array | undefined> {
     console.info(`${RawFileManager.TAG} getRawfileContent called`)
-
-    const rawFileContent = await getContext().resourceManager.getRawFileContent(fileName);
-
+    const rawFileContent = await this.context?.resourceManager.getRawFileContent(fileName);
     return rawFileContent
   }
 
@@ -52,15 +55,13 @@ export class RawFileManager {
 
   //For json2.json
   private static uint8ArrayToString2(array: Uint8Array) {
-    let textDecoderOptions: util.TextDecoderOptions = {
+    const textDecoderOptions: util.TextDecoderOptions = {
       fatal: false,
       ignoreBOM: true
     }
-    let decodeToStringOptions: util.DecodeToStringOptions = {
-      stream: false
-    }
-    let textDecoder = util.TextDecoder.create('utf-8', textDecoderOptions);
-    let retStr = textDecoder.decodeToString(array, decodeToStringOptions);
+    const decodeToStringOptions: util.DecodeToStringOptions = { stream: false }
+    const textDecoder = util.TextDecoder.create('utf-8', textDecoderOptions);
+    const retStr = textDecoder.decodeToString(array, decodeToStringOptions);
     return retStr;
   }
 
@@ -69,14 +70,14 @@ export class RawFileManager {
     console.info(`${RawFileManager.TAG} readRawFile2 called`)
     let listArray: Array<Product> = []
     try {
-      const rawFileContent = await RawFileManager.getRawfileContent(filename)
-      let file_data: string = RawFileManager.uint8ArrayToString2(rawFileContent)
-      let obj = JSON.parse(file_data) as ProductsData;
-
-      listArray = (obj as object)?.["products"];
-
+      const rawFileContent = await this.getRawfileContent(filename)
+      if (rawFileContent) {
+        const fileData: string = RawFileManager.uint8ArrayToString2(rawFileContent)
+        const obj = JSON.parse(fileData) as ProductsData;
+        listArray = obj.products;
+      }
     } catch (e) {
-      console.error("error is " + (e as BusinessError).message);
+      console.error(`error is ${(e as BusinessError).message}`);
     }
 
     return listArray;
@@ -84,18 +85,17 @@ export class RawFileManager {
 
   async readRawFile3(filename: string, context: Context | undefined): Promise<Array<Post>> {
     console.info(`${RawFileManager.TAG} readRawFile3 called`)
-
     context?.resourceManager.getRawFileContent(filename)
     let listArray: Array<Post> = []
     try {
-      const rawFileContent = await RawFileManager.getRawfileContent(filename)
-      let file_data: string = RawFileManager.uint8ArrayToString2(rawFileContent)
-      let obj = JSON.parse(file_data) as PostsData;
-
-      listArray = (obj as object)?.["posts"];
-
+      const rawFileContent = await this.getRawfileContent(filename)
+      if (rawFileContent) {
+        const fileData: string = RawFileManager.uint8ArrayToString2(rawFileContent)
+        const obj = JSON.parse(fileData) as PostsData;
+        listArray = obj.posts;
+      }
     } catch (e) {
-      console.error("error is " + (e as BusinessError).message);
+      console.error(`error is ${(e as BusinessError).message}`);
     }
 
     return listArray;
@@ -103,10 +103,7 @@ export class RawFileManager {
 
   async readRawFile4(filename: string, context: Context | undefined) {
     console.info(`${RawFileManager.TAG} readRawFile4 called`)
-
-    let fileDescriptor = await context?.resourceManager.getRawFd(filename);
-
-
+    const fileDescriptor = await context?.resourceManager.getRawFd(filename);
     return fileDescriptor;
   }
 }

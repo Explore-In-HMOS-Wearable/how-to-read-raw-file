@@ -4,20 +4,20 @@ import { RawFileManager } from '../common/RawFileManager';
 @Entry
 @Component
 struct Index {
-  @State file_length1: string = 'File 1';
-  @State file_length2: string = 'File 2';
-  @State file_length3: string = 'File 3';
-  @State file_length4: string = 'File 4';
-  @State txt_filename: string = "Empty"
+  @State fileLength1: string = 'File 1';
+  @State fileLength2: string = 'File 2';
+  @State fileLength3: string = 'File 3';
+  @State fileLength4: string = 'File 4';
+  @State txtFilename: string = 'Empty'
   scroller: Scroller = new Scroller()
-  rawFileManager: RawFileManager = RawFileManager.getInstance()
+  rawFileManager: RawFileManager = RawFileManager.getInstance(this.getUIContext().getHostContext())
 
   build() {
     Scroll(this.scroller) {
       Column({ space: 10 }) {
         Blank().height(ConstantUI.PERCENT_5)
 
-        Text(this.txt_filename).fontSize(18)
+        Text(this.txtFilename).fontSize(18)
 
         Divider().height(ConstantUI.PERCENT_5)
 
@@ -26,16 +26,18 @@ struct Index {
           .height(ConstantUI.PERCENT_20)
           .onClick(async () => {
             const returnedJson = await this.rawFileManager.readRawFileDeprecated('json1.json')
-            this.file_length1 = `length is ${returnedJson.users.length}`
-            this.txt_filename = this.file_length1
+            if (returnedJson) {
+              this.fileLength1 = `length is ${returnedJson.users.length}`
+              this.txtFilename = this.fileLength1
+            }
           })
         Button($r('app.string.button2'))
           .width(ConstantUI.PERCENT_48)
           .height(ConstantUI.PERCENT_20)
           .onClick(async () => {
             const returnedJson = await this.rawFileManager.readRawFile2('json2.json')
-            this.file_length2 = `length is ${returnedJson.length}`
-            this.txt_filename = this.file_length2
+            this.fileLength2 = `length is ${returnedJson.length}`
+            this.txtFilename = this.fileLength2
           })
         Button($r('app.string.button3'))
           .width(ConstantUI.PERCENT_48)
@@ -43,8 +45,8 @@ struct Index {
           .onClick(async () => {
             const returnedJson =
               await this.rawFileManager.readRawFile3('json3.json', this.getUIContext().getHostContext())
-            this.file_length3 = `length is ${returnedJson.length}`
-            this.txt_filename = this.file_length3
+            this.fileLength3 = `length is ${returnedJson.length}`
+            this.txtFilename = this.fileLength3
           })
         Button($r('app.string.button4'))
           .width(ConstantUI.PERCENT_48)
@@ -52,8 +54,8 @@ struct Index {
           .onClick(async () => {
             const returnedJson =
               await this.rawFileManager.readRawFile4('audio_file.mp3', this.getUIContext().getHostContext())
-            this.file_length4 = `length is ${returnedJson?.length}`
-            this.txt_filename = this.file_length4
+            this.fileLength4 = `length is ${returnedJson?.length}`
+            this.txtFilename = this.fileLength4
           })
       }
       .width(ConstantUI.PERCENT_100)

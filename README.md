@@ -6,12 +6,14 @@ This codelab demonstrates an application that will read raw files and input the 
 .mp3 files.
 
 # Preview
+
 <div>
-<img src="screenshot/ss1.png" width="25%" />
-<img src="screenshot/ss2.png" width="25%" />
+    <img src="screenshots/ss1.png" width="25%" />
+    <img src="screenshots/ss2.png" width="25%" />
 </div>
 
 # Use Cases
+
 - Read raw files
 
 # Tech Stack
@@ -22,6 +24,7 @@ This codelab demonstrates an application that will read raw files and input the 
 * Libraries: @kit.ArkUI, @kit.BasicServicesKit, @kit.ArkTS
 
 # Directory Structure
+
 ```
 Raw file  codelab/
 ├── src/
@@ -46,9 +49,12 @@ Raw file  codelab/
 ```
 
 # Constraints and Restrictions
+
 ## Supported Device
+
 - Huawei Watch 5
 
-# LICENSE
+# License
+
 **Raw File Reading** is distributed under the terms of the MIT License.
 See the [license](/LICENSE) for more information.
